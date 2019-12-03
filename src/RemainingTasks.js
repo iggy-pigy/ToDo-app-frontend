@@ -8,4 +8,4 @@ class RemainingTasks extends React.Component{
     }
 }
 
-export default DeveloperCount;
+export default RemainingTasks;
