@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "./Header";
+import AddTasks from "./AddTasks";
 import RemainingTasks from "./RemainingTasks";
 import ProgressBar from './ProgressBar';
 import Tasks from "./Tasks";
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <AddTasks />
       <RemainingTasks />
       <ProgressBar percentage={25}/>
       <div className="container">

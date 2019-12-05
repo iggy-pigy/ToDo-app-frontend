@@ -1,0 +1,15 @@
+
+.tasks {
+  text-align: center;
+  margin: 150px 50px 50px 50px;
+}
+  
+button {
+  font-family: 'Staatliches', cursive;
+  color: #9AE617;
+  font-size: inherit;
+  background-color: black;
+  min-width: 40px;
+  min-height: 35px;
+  text-align: center;
+}
