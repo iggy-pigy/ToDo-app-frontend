@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'Staatliches', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: black;
+    text-align: center;
+    margin: 0px 25px 25px 25px;
+}
+
+h1::first-letter {
+  font-size: 150%;
+  color: #9AE617;
+  text-shadow:
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}

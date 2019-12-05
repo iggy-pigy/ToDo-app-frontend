@@ -1,0 +1,21 @@
+.row {
+    font-family: 'Staatliches', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.button {
+    font-family: 'Staatliches', cursive;
+    color: #9AE617;
+    font-size: inherit;
+    background-color: black;
+    min-width: 40px;
+    min-height: 35px;
+    text-align: center;
+}
+  
+.button:hover {
+  background-color: #FFB5FC;
+}

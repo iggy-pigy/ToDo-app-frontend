@@ -1,4 +1,7 @@
 import React from "react"
+import "./Tasks.css";
+
+
 
 class Tasks extends React.Component {
     render() {
@@ -8,10 +11,10 @@ class Tasks extends React.Component {
                 <p>{this.props.task}</p>
             </div>
             <div className="col-12 col-sm-3">
-            <button className="btn btn-primary">Done</button>
+            <button className="button">Done</button>
             </div>
             <div className="col-12 col-sm-3">
-            <button className="btn btn-primary">Delete</button>
+            <button className="button">Delete</button>
         </div>
         </div>
         );
