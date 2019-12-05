@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 
 const Track = styled.div`
-width: 100%;
+width: 80%;
 height: 20px;
 background-color: #FFB5FC;
 border-radius: 10px;
+margin: 0px 10px 80px 10px;
 `
 
 const ProgressInTracker = styled.div`

@@ -4,6 +4,7 @@ import AddTasks from "./AddTasks";
 import RemainingTasks from "./RemainingTasks";
 import ProgressBar from './ProgressBar';
 import Tasks from "./Tasks";
+import Notes from "./Notes";
 
 
 import './App.css';
@@ -21,7 +22,7 @@ function App() {
         <Tasks task="Read a book"/>
         <Tasks task="Water plants"/>
       </div>
-
+      <Notes />
     </div>
   );
 }

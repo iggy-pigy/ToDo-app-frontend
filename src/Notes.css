@@ -1,0 +1,18 @@
+h4 {
+    font-family: 'Staatliches', cursive;
+    color: #9AE617;
+     text-shadow:
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    margin: 50px 10px 0px 10px;
+  }
+
+.Notes {
+    text-align: center;
+    margin: 0px;
+    max-width: 70%;
+    width: 1000px;
+    background-color: #E0E0E0;
+  }
