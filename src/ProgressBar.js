@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 
 const Track = styled.div`
-width: 80%;
+max-width: 70%;
+width: 1000px;
 height: 20px;
 background-color: #FFB5FC;
 border-radius: 10px;
