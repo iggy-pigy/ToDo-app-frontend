@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <RemainingTasks />
-      <ProgressBar />
+      <ProgressBar percentage={25}/>
       <div className="container">
         <Tasks task="Walk a dog"/>
         <Tasks task="Go to the gym"/>
@@ -23,5 +23,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
