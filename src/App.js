@@ -5,6 +5,7 @@ import RemainingTasks from "./RemainingTasks";
 import ProgressBar from './ProgressBar';
 import Tasks from "./Tasks";
 import Notes from "./Notes";
+import Gherkin from "./Gherkin";
 
 
 import './App.css';
@@ -23,6 +24,7 @@ function App() {
         <Tasks task="Water plants"/>
       </div>
       <Notes />
+      <Gherkin />
     </div>
   );
 }

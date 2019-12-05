@@ -13,3 +13,7 @@ button {
   min-height: 35px;
   text-align: center;
 }
+
+button:hover {
+  background-color: #FFB5FC;
+}

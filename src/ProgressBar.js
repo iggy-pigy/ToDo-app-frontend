@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import "./ProgressBar.css"
 
 
 const Track = styled.div`
@@ -21,7 +22,7 @@ border-radius: 8px;
 class ProgressBar extends React.Component {
     render () {
         return (
-            <Track>
+            <Track className="track">
             <ProgressInTracker percentage={this.props.percentage} />
             </Track>
         );
