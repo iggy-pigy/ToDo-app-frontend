@@ -3,7 +3,7 @@ import "./Header.css";
 
 class Header extends React.Component {
     render() {
-        return(
+        return (
             <h1>Welcome to Iggy's ToDo application!</h1>
         );
     }
