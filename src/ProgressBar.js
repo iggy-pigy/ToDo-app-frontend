@@ -20,10 +20,10 @@ border-radius: 8px;
 `
 
 class ProgressBar extends React.Component {
-    render () {
+    render() {
         return (
             <Track className="track">
-            <ProgressInTracker percentage={this.props.percentage} />
+                <ProgressInTracker percentage={this.props.percentage} />
             </Track>
         );
     }
