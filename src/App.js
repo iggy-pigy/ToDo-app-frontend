@@ -10,7 +10,15 @@ import Gherkin from "./Gherkin";
 
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  state = {
+    tasks: [
+      task
+    ]
+  }
+}
+
+
   return (
     <div className="App">
       <Header />
