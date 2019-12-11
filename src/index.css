@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h2 {
+  font-family: 'Staatliches', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  color:#007BFF;
+  letter-spacing: 3px;
+}
+
