@@ -10,11 +10,10 @@ class Tasks extends React.Component {
                 <div className="col-12 col-sm-6">
                     <p>{this.props.task}</p>
                 </div>
-                <div className="col-12 col-sm-3">
+                <div className="col-12 col-sm-6">
+                    {this.props.done === true ? <button className="button">Delete</button> :
                     <button className="button">Done</button>
-                </div>
-                <div className="col-12 col-sm-3">
-                    <button className="button">Delete</button>
+                    }
                 </div>
             </div>
         );

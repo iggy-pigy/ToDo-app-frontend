@@ -4,11 +4,21 @@ import "./Notes.css";
 
 
 class Notes extends React.Component {
-  render() {
+   state= {
+      notes: "",
+    };
+
+    updateNotes = (event) => {
+        this.setState({
+            notes: event.target.value
+        });
+    };
+
+    render() {
     return (
       <div>
         <h4>Notes</h4>
-        <textarea className="Notes" placeholder="Add your notes here"></textarea>
+        <textarea className="Notes" onChange={this.updateNotes} value={this.state.notes} placeholder="Add your notes here"></textarea>
         <button type="submit" value="Submit">Add</button>
       </div>
     );

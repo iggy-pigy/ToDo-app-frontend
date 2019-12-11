@@ -5,7 +5,7 @@ class RemainingTasks extends React.Component {
   render() {
     return (
       <p className="paragraph">
-        Things to do : <span>4</span>
+        Things to do : <span>{this.props.count}</span>
       </p>
     );
   }
