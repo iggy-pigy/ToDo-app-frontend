@@ -9,7 +9,7 @@ button {
   color: #9AE617;
   font-size: inherit;
   background-color: black;
-  max-width: 30%;
+  width: 70px;
   text-align: center;
 }
 
