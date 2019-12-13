@@ -7,10 +7,10 @@ class Tasks extends React.Component {
     render() {
         return (
             <div className="row">
-                <div className="col-12 col-sm-6">
+                <div className="col-6">
                     <p>{this.props.task}</p>
                 </div>
-                <div className="col-12 col-sm-6">
+                <div className="col-6">
                     {this.props.done === true ? <button className="button">Delete</button> :
                     <button className="button">Done</button>
                     }

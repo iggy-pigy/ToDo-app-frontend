@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import "./ProgressBar.css"
 
 
 const Track = styled.div`
