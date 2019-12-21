@@ -51,6 +51,14 @@ class App extends React.Component {
     });
   };
 
+  doneTask = id => {
+    const taskList = this.state.taskList.filter(tas => tas.id !== id);
+
+    this.setState({
+      taskList
+    });
+  };
+
   addNewTask = task => {
     const newTask = {
       task: task,
@@ -90,7 +98,7 @@ class App extends React.Component {
           {thingsToDo.map(taskList => {
             return (
               <Tasks
-                deleteTaskFunc={this.deleteTask}
+                doneTaskFunc={this.doneeTask}
                 key={taskList.id}
                 done={taskList.done}
                 task={taskList.task}
