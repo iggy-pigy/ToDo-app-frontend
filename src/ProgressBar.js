@@ -20,12 +20,12 @@ const ProgressInTracker = styled.div`
 class ProgressBar extends React.Component {
   render() {
     return (
-      <dv>
+      <div>
         <h4>Progress</h4>
         <Track className="track">
           <ProgressInTracker percentage={this.props.percentage} />
         </Track>
-      </dv>
+      </div>
     );
   }
 }

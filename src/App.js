@@ -40,14 +40,14 @@ class App extends React.Component {
       }
     ]
   };
+  //How to make thingsToDone after pressing button Done move to ThingsDone section?
+  //doneTask = id => {
 
   deleteTask = id => {
-    const filteredTasks = this.state.taskList.filter(task => {
-      return task.id !== id;
-    });
+    const taskList = this.state.taskList.filter(tas => tas.id !== id);
 
     this.setState({
-      taskList: filteredTasks
+      taskList
     });
   };
 
@@ -78,7 +78,7 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           <Header />
-          <AddTasks />
+          <AddTasks addNewTaskFunc={this.addNewTask} />
           <RemainingTasks count={thingsToDo.length} />
           <ProgressBar
             percentage={
@@ -90,9 +90,11 @@ class App extends React.Component {
           {thingsToDo.map(taskList => {
             return (
               <Tasks
+                deleteTaskFunc={this.deleteTask}
                 key={taskList.id}
                 done={taskList.done}
                 task={taskList.task}
+                id={taskList.id}
               />
             );
           })}
@@ -100,9 +102,11 @@ class App extends React.Component {
           {thingsDone.map(taskList => {
             return (
               <Tasks
+                deleteTaskFunc={this.deleteTask}
                 key={taskList.id}
                 done={taskList.done}
                 task={taskList.task}
+                id={taskList.id}
               />
             );
           })}

@@ -13,10 +13,7 @@ class AddTasks extends React.Component {
   };
 
   addTask = () => {
-    const filteredTask = this.state.task.filter(t => {
-      return t.length > 0;
-    });
-    this.props.addNewTaskFunc(filteredTask);
+    this.props.addNewTaskFunc(this.state.task);
   };
 
   render() {
