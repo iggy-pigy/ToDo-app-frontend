@@ -6,6 +6,10 @@ class Tasks extends React.Component {
     this.props.deleteTaskFunc(this.props.id);
   };
 
+  handleDone = () => {
+    this.props.doneTaskFunc(this.props.id);
+  };
+
   render() {
     return (
       <div className="row">
@@ -18,7 +22,9 @@ class Tasks extends React.Component {
               Delete
             </button>
           ) : (
-            <button className="button">Done</button>
+            <button onClick={this.handleDone} className="button">
+              Done
+            </button>
           )}
         </div>
       </div>
