@@ -5,7 +5,6 @@ import AddTasks from "./AddTasks";
 import RemainingTasks from "./RemainingTasks";
 import ProgressBar from "./ProgressBar";
 import Tasks from "./Tasks";
-import Notes from "./Notes";
 import Gherkin from "./Gherkin";
 
 import "./App.css";
@@ -40,8 +39,6 @@ class App extends React.Component {
       }
     ]
   };
-  //How to make thingsToDone after pressing button Done move to ThingsDone section?
-  //doneTask = id => {
 
   deleteTask = id => {
     const taskList = this.state.taskList.filter(tas => tas.id !== id);
@@ -52,10 +49,13 @@ class App extends React.Component {
   };
 
   doneTask = id => {
-    const taskList = this.state.taskList.filter(tas => tas.id !== id);
+    const doneTas = this.state.taskList.map(task => {
+      task.done = task.id === id ? true : task.done;
+      return task;
+    });
 
     this.setState({
-      taskList
+      taskList: doneTas
     });
   };
 
@@ -98,7 +98,7 @@ class App extends React.Component {
           {thingsToDo.map(taskList => {
             return (
               <Tasks
-                doneTaskFunc={this.doneeTask}
+                doneTaskFunc={this.doneTask}
                 key={taskList.id}
                 done={taskList.done}
                 task={taskList.task}
@@ -119,7 +119,6 @@ class App extends React.Component {
             );
           })}
         </div>
-        <Notes />
         <Gherkin />
       </div>
     );
