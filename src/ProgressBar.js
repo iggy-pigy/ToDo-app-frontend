@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Emoji from "react-emoji-render";
 import "./ProgressBar.css";
 
 const Track = styled.div`
@@ -24,6 +25,13 @@ class ProgressBar extends React.Component {
   render() {
     return (
       <div>
+        <p className="text">
+          {this.props.percentage > 50 ? (
+            <Emoji text="Good job! Keep going!👍" />
+          ) : (
+            <Emoji text="Don't give up! You are coming closer 😉" />
+          )}
+        </p>
         <Track className="track">
           <ProgressInTracker percentage={this.props.percentage} />
         </Track>
