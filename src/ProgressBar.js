@@ -22,16 +22,19 @@ const ProgressInTracker = styled.div`
 `;
 
 class ProgressBar extends React.Component {
+  renderEmoji = () => {
+    if (this.props.percentage > 0 && this.props.percentage < 30) {
+      return <Emoji text="Good job! Keep going!👍" />;
+    } else if (this.props.percentage > 30 && this.props.percentage < 100) {
+      return <Emoji text="Don't give up! You are coming closer 😉" />;
+    } else {
+      return <Emoji text="No tasks to do." />;
+    }
+  };
   render() {
     return (
       <div>
-        <p className="text">
-          {this.props.percentage > 50 ? (
-            <Emoji text="Good job! Keep going!👍" />
-          ) : (
-            <Emoji text="Don't give up! You are coming closer 😉" />
-          )}
-        </p>
+        <p className="text">{this.renderEmoji()}</p>
         <Track className="track">
           <ProgressInTracker percentage={this.props.percentage} />
         </Track>
