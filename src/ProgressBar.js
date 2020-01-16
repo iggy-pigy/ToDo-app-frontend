@@ -9,7 +9,7 @@ const Track = styled.div`
   height: 20px;
   background-color: #ffb5fc;
   border-radius: 10px;
-  margin: 0px 10px 80px 10px;
+  margin: 0px 15% 80px 15%;
   text-align: center;
 `;
 
