@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ToDo-app-frontend/static/css/main.3c4cd8ed.chunk.css",
+    "main.js": "/ToDo-app-frontend/static/js/main.b1e12def.chunk.js",
+    "main.js.map": "/ToDo-app-frontend/static/js/main.b1e12def.chunk.js.map",
+    "runtime-main.js": "/ToDo-app-frontend/static/js/runtime-main.4a86bf0f.js",
+    "runtime-main.js.map": "/ToDo-app-frontend/static/js/runtime-main.4a86bf0f.js.map",
+    "static/js/2.34972d37.chunk.js": "/ToDo-app-frontend/static/js/2.34972d37.chunk.js",
+    "static/js/2.34972d37.chunk.js.map": "/ToDo-app-frontend/static/js/2.34972d37.chunk.js.map",
+    "index.html": "/ToDo-app-frontend/index.html",
+    "precache-manifest.ad585c6b08aadf7e83ba66d529aaade9.js": "/ToDo-app-frontend/precache-manifest.ad585c6b08aadf7e83ba66d529aaade9.js",
+    "service-worker.js": "/ToDo-app-frontend/service-worker.js",
+    "static/css/main.3c4cd8ed.chunk.css.map": "/ToDo-app-frontend/static/css/main.3c4cd8ed.chunk.css.map",
+    "static/media/Header.css": "/ToDo-app-frontend/static/media/cucamber_6.8b190cbb.jpg",
+    "static/media/giphy.gif": "/ToDo-app-frontend/static/media/giphy.d586e3dc.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4a86bf0f.js",
+    "static/js/2.34972d37.chunk.js",
+    "static/css/main.3c4cd8ed.chunk.css",
+    "static/js/main.b1e12def.chunk.js"
+  ]
+}
