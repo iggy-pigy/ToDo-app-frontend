@@ -12,33 +12,7 @@ import "./App.css";
 
 class App extends React.Component {
   state = {
-    taskList: [
-      {
-        task: "Walk a dog",
-        done: false,
-        id: uuid()
-      },
-      {
-        task: "Go to the gym",
-        done: true,
-        id: uuid()
-      },
-      {
-        task: "Read a book",
-        done: true,
-        id: uuid()
-      },
-      {
-        task: "Water plants",
-        done: true,
-        id: uuid()
-      },
-      {
-        task: "Write a letter",
-        done: false,
-        id: uuid()
-      }
-    ]
+    taskList: []
   };
 
   deleteTask = id => {
