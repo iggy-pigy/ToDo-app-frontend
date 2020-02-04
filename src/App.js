@@ -49,17 +49,26 @@ class App extends React.Component {
   };
 
   addNewTask = task => {
+    console.log(task);
+
     const newTask = {
       task: task,
       done: false,
       id: uuid()
     };
-    const copy = this.state.taskList.slice();
-    copy.push(newTask);
-
-    this.setState({
-      taskList: copy
-    });
+    axios
+      .post(
+        "https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks",
+        newTask
+      )
+      .then(response => {
+        const newTaskList = response.data;
+        const copy = this.state.taskList.slice();
+        copy.push(newTaskList);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   render() {
