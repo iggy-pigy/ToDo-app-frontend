@@ -15,6 +15,20 @@ class App extends React.Component {
     taskList: []
   };
 
+  componentDidMount() {
+    axios
+      .get("https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks")
+      .then(response => {
+        const taskList = response.data.taskList;
+        this.setState({
+          taskList: taskList
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
   deleteTask = id => {
     const taskList = this.state.taskList.filter(tas => tas.id !== id);
 
