@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks")
+      .get(`https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks`)
       .then(response => {
         const taskList = response.data.taskList;
         this.setState({
@@ -52,12 +52,12 @@ class App extends React.Component {
     axios
       .put(
         `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`,
-        { done: true }
+        { done: false }
       )
       .then(() => {
         const updateTasks = this.state.taskList.map(task => {
           if (task.id === id) {
-            task.done = true;
+            task.done = false;
           }
           return task;
         });
