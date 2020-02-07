@@ -2,12 +2,12 @@ import React from "react";
 import "./Tasks.css";
 
 class Tasks extends React.Component {
-  handleDelete = () => {
+  handleDeleteTask = () => {
     this.props.deleteTaskFunc(this.props.id);
   };
 
-  handleDone = () => {
-    this.props.doneTaskFunc(this.props.id);
+  handleCompletedTask = () => {
+    this.props.completedTaskFunc(this.props.id);
   };
 
   render() {
@@ -18,11 +18,11 @@ class Tasks extends React.Component {
         </div>
         <div className="col-6">
           {this.props.done === true ? (
-            <button onClick={this.handleDelete} className="button">
+            <button onClick={this.handleDeleteTask} className="button">
               Delete
             </button>
           ) : (
-            <button onClick={this.handleDone} className="button">
+            <button onClick={this.handleCompletedTask} className="button">
               Done
             </button>
           )}

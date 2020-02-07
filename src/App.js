@@ -96,11 +96,11 @@ class App extends React.Component {
 
   render() {
     const thingsToDo = this.state.taskList.filter(task => {
-      return task.done === false;
+      return task.completed === false;
     });
 
     const thingsDone = this.state.taskList.filter(task => {
-      return task.done === true;
+      return task.completed === true;
     });
 
     return (
