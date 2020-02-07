@@ -73,8 +73,7 @@ class App extends React.Component {
   addNewTask = task => {
     const newTask = {
       task: task,
-      done: false,
-      id: uuid()
+      completed: false
     };
     axios
       .post(
