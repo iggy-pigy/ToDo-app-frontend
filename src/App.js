@@ -60,8 +60,6 @@ class App extends React.Component {
   };
 
   addNewTask = task => {
-    console.log(task);
-
     const newTask = {
       task: task,
       done: false,
@@ -74,8 +72,11 @@ class App extends React.Component {
       )
       .then(response => {
         const newTaskList = response.data;
-        const copy = this.state.taskList.slice();
-        copy.push(newTaskList);
+        const copyOfTasks = this.state.taskList.slice();
+        copyOfTasks.push(newTaskList);
+        this.setState({
+          taskList: copyOfTasks
+        });
       })
       .catch(err => {
         console.log(err);
