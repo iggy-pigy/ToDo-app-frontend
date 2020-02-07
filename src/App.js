@@ -30,11 +30,22 @@ class App extends React.Component {
   }
 
   deleteTask = id => {
-    const taskList = this.state.taskList.filter(tas => tas.id !== id);
-
-    this.setState({
-      taskList
-    });
+    axios
+      .delete(
+        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`
+      )
+      .then(() => {
+        const filteredTasks = this.state.taskList.filter(tas => {
+          if (tas.id === id) return false;
+          else return true;
+        });
+        this.setState({
+          taskList: filteredTasks
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   doneTask = id => {
