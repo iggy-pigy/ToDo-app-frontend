@@ -49,14 +49,25 @@ class App extends React.Component {
   };
 
   doneTask = id => {
-    const doneTas = this.state.taskList.map(task => {
-      task.done = task.id === id ? true : task.done;
-      return task;
-    });
-
-    this.setState({
-      taskList: doneTas
-    });
+    axios
+      .put(
+        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`,
+        { done: true }
+      )
+      .then(() => {
+        const updateTasks = this.state.taskList.map(task => {
+          if (task.id === id) {
+            task.done = true;
+          }
+          return task;
+        });
+        this.setState({
+          taskList: updateTasks
+        });
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   addNewTask = task => {
