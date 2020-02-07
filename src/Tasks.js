@@ -17,7 +17,7 @@ class Tasks extends React.Component {
           <p>{this.props.task}</p>
         </div>
         <div className="col-6">
-          {this.props.done === true ? (
+          {this.props.completed === true ? (
             <button onClick={this.handleDeleteTask} className="button">
               Delete
             </button>
