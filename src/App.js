@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks`)
+      .get("https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks")
       .then(response => {
         const taskList = response.data.taskList;
         this.setState({
