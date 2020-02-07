@@ -48,21 +48,21 @@ class App extends React.Component {
       });
   };
 
-  doneTask = id => {
+  completedTask = id => {
     axios
       .put(
         `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`,
-        { done: false }
+        { completed: false }
       )
       .then(() => {
-        const updateTasks = this.state.taskList.map(task => {
+        const updateTask = this.state.taskList.map(task => {
           if (task.id === id) {
-            task.done = false;
+            task.completed = false;
           }
           return task;
         });
         this.setState({
-          taskList: updateTasks
+          taskList: updateTask
         });
       })
       .catch(err => {
@@ -119,7 +119,7 @@ class App extends React.Component {
           {thingsToDo.map(taskList => {
             return (
               <Tasks
-                doneTaskFunc={this.doneTask}
+                completedTaskFunc={this.completedTask}
                 key={taskList.id}
                 done={taskList.done}
                 task={taskList.task}
