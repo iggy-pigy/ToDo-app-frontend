@@ -19,7 +19,9 @@ class App extends React.Component {
     axios
       .get("https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks")
       .then(response => {
-        const taskList = response.data.taskList;
+        const taskList = response.data.tasks;
+        console.log(response.data);
+        console.log(taskList);
         this.setState({
           taskList: taskList
         });
