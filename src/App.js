@@ -121,6 +121,7 @@ class App extends React.Component {
             return (
               <Tasks
                 completedTaskFunc={this.completedTask}
+                key={taskList.id}
                 completed={taskList.completed}
                 task={taskList.task}
                 id={taskList.id}
@@ -132,6 +133,7 @@ class App extends React.Component {
             return (
               <Tasks
                 deleteTaskFunc={this.deleteTask}
+                key={taskList.id}
                 completed={taskList.completed}
                 task={taskList.task}
                 id={taskList.id}
