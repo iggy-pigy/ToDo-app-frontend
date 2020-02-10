@@ -34,7 +34,7 @@ class App extends React.Component {
   deleteTask = id => {
     axios
       .delete(
-        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`
+        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks/${id}`
       )
       .then(() => {
         const filteredTasks = this.state.taskList.filter(tas => {
@@ -53,7 +53,7 @@ class App extends React.Component {
   completedTask = id => {
     axios
       .put(
-        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks${id}`,
+        `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks/${id}`,
         { completed: false }
       )
       .then(() => {
