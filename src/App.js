@@ -54,12 +54,12 @@ class App extends React.Component {
     axios
       .put(
         `https://gbrvvbp9nc.execute-api.eu-west-1.amazonaws.com/dev/tasks/${id}`,
-        { completed: false }
+        { completed: true }
       )
       .then(() => {
         const updateTask = this.state.taskList.map(task => {
           if (task.id === id) {
-            task.completed = false;
+            task.completed = true;
           }
           return task;
         });
