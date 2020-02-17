@@ -15,7 +15,7 @@ This project uses the following technology:
   
 It has been designed and built with mobile-first responsive principles in mind.
 
-# Running the application locally
+## Running the application locally
 Node.js must be installed if not already.
 
 Clone the application and install dependencies:
