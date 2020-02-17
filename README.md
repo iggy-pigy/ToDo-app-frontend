@@ -12,6 +12,7 @@ This project uses the following technology:
 * Webpack
 * Axios
 * ESLint
+  
 It has been designed and built with mobile-first responsive principles in mind.
 
 # Running the application locally
