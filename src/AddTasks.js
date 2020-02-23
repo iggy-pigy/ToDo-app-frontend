@@ -23,7 +23,7 @@ class AddTasks extends React.Component {
           type="text"
           onChange={this.updateTask}
           value={this.state.task}
-          placeholder="Add things to do here"
+          placeholder="Add tasks here"
         />
         <button onClick={this.addTask}>Add</button>
       </div>
