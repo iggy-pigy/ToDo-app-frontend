@@ -115,7 +115,7 @@ class App extends React.Component {
               (thingsDone.length + thingsToDo.length)
             }
           />
-          <h2>Things to do: </h2>
+          <h2>Remaining tasks: </h2>
           {thingsToDo.map(taskList => {
             return (
               <Tasks
