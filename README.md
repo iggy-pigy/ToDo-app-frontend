@@ -2,6 +2,8 @@
 
 This is the front end of a Todo Application, built throughout the Tech Returners Your Journey Into Tech course. It integrates with a backend, available here: https://github.com/Tech-Returners-Project-Team/tr-final-project-backend
 
+The hosted version of the application is available here: https://iggy-pigy.github.io/ToDo-app-frontend/
+
 ## Technology Used
 
 This project uses the following technology:
